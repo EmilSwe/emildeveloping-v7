@@ -33,68 +33,60 @@
     <nav class="nav" id="nav">
         <img src="assets/img/logo.png" alt="Emil Developing" class="logo">
         <ul class="mobile-ul" id="mobile-ul">
-            <a href="index.php"><li>Hem</li></a>
-            <a href="case.php"><li>Case</li></a>
-            <a href="tjanster.php"><li>Tjänster</li></a>
-            <a href="contact.php"><li>Kontakt</li></a>
+            <a href="index.html"><li>Hem</li></a>
+            <a href="case.html"><li>Case</li></a>
+            <a href="tjanster.html"><li>Tjänster</li></a>
+            <a href="contact.html"><li>Kontakt</li></a>
         </ul>
     </nav>
 
     <section class="top" id="top">
-        <div class="title">Kontakt</div>
+        <div class="title">Tjänster</div>
     </section>
 
-    <section class="contact" id="contact">
-        <form action="" method="POST">
-            <div class="form-group">
-                <div class="input">
-                    <i class="fas fa-user"></i>
-                    <input type="text" class="contact-input" name="firstname" placeholder="Förnamn" required />
-                </div>
-
-                <div class="input">
-                    <i class="fas fa-user"></i>
-                    <input type="text" class="contact-input" name="lastname" placeholder="Efternamn" required />
-                </div>
+    <section class="webbutveckling" id="webbutveckling">
+        <div class="wrapper">
+            <div class="box-left">
+                <div class="title">Kvalité</div>
+                <div class="text">Emil Developing's webbprojekt håller väldigt hög standard. Jag ser alltid till att kvaliten på projekten är av hög kvalité. Alla webbsidor är responsiva och när det kommer till backend så är säkerheten prio ett.</div>
             </div>
 
-            <div class="form-group">
-                <div class="input-full">
-                    <i class="fas fa-at"></i>
-                    <input type="email" class="contact-input" name="email" placeholder="E-mail adress" required />
-                </div>
+            <div class="box-right">
+                <div class="title">Kunden har alltid rätt</div>
+                <div class="text">Hos Emil Developing så är det kunden som alltid har rätt! Jag lyssnar på mina kunder och tar åt mig av feedbacken.</div>
             </div>
 
-            <div class="form-group">
-                <div class="input-full">
-                    <textarea type="text" class="contact-input" name="message" placeholder="Ditt meddelande.." rows=5 required></textarea>
-                </div>
+            <div class="box-left">
+                <div class="title">Responsiv design</div>
+                <div class="text">Alla webbplatser som skapas är alltid responsiva! Därför behöver du inte oroa dig för att behöva skapa en mobil app tillexempel, eftersom hemsidan kommer att vara kompitabel med alla olika typer av enheter!</div>
             </div>
 
-            <button type="submit" name="submit" class="main-btn">Skicka</button>
-        </form>
+            <div class="box-right">
+                <div class="title">Önskemål</div>
+                <div class="text">När jag planerar hur din webbplats ska fungera, och se ut, så lyssnar jag alltid på kundens önskemål och utformar min offert utifrån detta! Jag brukar även skapa skisser om hur jag tänker att det kommer se ut på ett ungefär, sedan får kunden tycka till om detta!</div>
+            </div>
+
+            <div class="faq-wrapper">
+                <div class="title">Vanliga frågor</div>
+
+                <div class="faq-box">
+                    <div class="question-box" id="question-box-1">Retur & ångerrätt</div>
+
+                    <div class="answer-box" id="answer-box-1">När du väl har mottagit filerna och betalat fakturan, så finns det ingen ångerrätt längre. Detta beror på att även fast jag ger tillbaka pengarna, så kanske du fortsätter använda mitt arbete.<br>Skulle det dock vara så att något inte fungerar, eller att något inte är som det beskrivs, så har Emil Developing såklart alltid rätten att återgärda problemet!<br>Innan den färdiga produkten levereras så har du alltid rätt att påverka slutresultatet, jag lyssnar alltid på kundens önskemål!</div>
+                </div>
+
+                <div class="faq-box">
+                    <div class="question-box" id="question-box-2">Leveranstid</div>
+
+                    <div class="answer-box" id="answer-box-2">Beroende på projektets bredd, och beroende på hur mycket jag har att göra så varierar leveranstiden av färdiga produkten ganska mycket.<br>Vid kontakt så kan jag dock såklart alltid ge en uppskattad tidsram.</div>
+                </div>
+
+                <div class="text">Har du fler frågor? <a href="contact.php" target="_blank">Kontakta mig</a>!</div>
+            </div>
+        </div>
     </section>
 
-<?php
-if(isset($_POST['submit'])){
-    $firstname = htmlspecialchars($_POST['firstname']);
-    $lastname = htmlspecialchars($_POST['lastname']);
-    $email = htmlspecialchars($_POST['email']);
-    $text = htmlspecialchars($_POST['message']);
-
-    $to = "emil@emildeveloping.tech";
-    $subject = "Kontakt formulär | Emil Developing";
-    $message = "
-    $text
-    \n\n
-    Från: $firstname $lastname ($email)
-    ";
-    $headers = "From: emil@emildeveloping.tech";
-    mail($to,$subject,$message,$headers);
-}
-?>
-
-<footer class="footer" id="footer">
+    <footer class="footer" id="footer">
         <div class="info-wrapper">
             <div class="box">
                 <div class="title">Kontakt</div>
