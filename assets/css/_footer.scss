@@ -1,0 +1,97 @@
+footer.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    background-color: #081018;
+
+    .info-wrapper {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2rem;
+
+        .box {
+            margin-left: 3rem;
+            margin-right: 3rem;
+
+            .text {
+                width: 35rem;
+                color: rgb(187, 187, 187) !important;
+            }
+
+            .title {
+                font-weight: 500;
+                font-size: 1.3em;
+                margin-bottom: 0.8rem;
+            }
+
+            i {
+                color: rgb(187, 187, 187) !important;
+                font-size: 0.8em;
+            }
+
+            ul {
+                list-style-type: none !important;
+                padding-left: 0 !important;
+                color: rgb(187, 187, 187) !important;
+                
+                a.social {
+                    color: rgb(187, 187, 187) !important;
+                }
+            }
+        }
+    }
+
+    hr {
+        border: 0;
+        clear:both;
+        display:block;
+        width: 80%;               
+        background-color: map-get($colors, secondary);
+        height: 1px;
+    }
+
+    .footer-end {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        a.villkor {
+            color: rgb(187, 187, 187) !important;
+            margin-top: 0.5rem;
+        }
+
+        .copyright {
+            font-size: 0.8em;
+            margin-top: 0.5rem;
+            color: rgb(187, 187, 187) !important;
+        }
+    }
+}
+
+@media(max-width: 1067px){
+    footer.footer {
+        padding-top: 1rem !important;
+
+        .info-wrapper {
+            flex-direction: column !important;
+            text-align: center;
+            margin: 2rem !important;
+            
+            .box {
+                margin: 0;
+                margin-top: 1rem !important;
+                margin-bottom: 1rem !important;
+                
+
+                .text {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}

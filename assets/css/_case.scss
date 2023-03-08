@@ -1,0 +1,50 @@
+section.case {
+    height: 100vh;
+    padding: 5rem;
+
+    .case-box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid map-get($colors, third);
+        border-radius: 5px;
+        margin-top: 1.5rem;
+
+        img.logo {
+            width: 10%;
+        }
+
+        img.logo-2 {
+            width: 6%;
+            margin-left: 2rem;
+            margin-right: 1.7rem;
+        }
+
+        .text {
+            width: 100%;
+            margin-left: 1rem;
+        }
+    }
+}
+
+@media(max-width: 1067px){
+    section.case {
+        height: auto !important;
+        padding: 2rem !important;
+
+        .case-box {
+            flex-direction: column !important;
+
+            img.logo {
+                width: 30%;
+            }
+
+            img.logo-2 {
+                width: 15%;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,100 @@
+section.home {
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 10rem;
+
+        .title {
+            font-size: 4.5em;
+        }
+    
+        .text {
+            color: rgb(214, 214, 214);
+            width: 60%;
+            margin-top: 1rem;
+        }
+    
+        .button-group {
+            display: flex;
+            flex-direction: row;
+            margin-top: 2rem;
+    
+            .main-btn {
+                margin-right: 1rem;
+            }
+    
+            .secondary {
+                background-color: map-get($colors, secondary);
+                border-color: map-get($colors, secondary);
+    
+                &:hover {
+                    border-color: map-get($colors, third);
+                }
+            }
+        }
+    }
+
+    .social {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 2rem;
+        margin-left: auto;
+
+        a {
+            color: map-get($colors, fourth);
+
+            &:hover {
+                transition: 0.2s;
+                color: map-get($colors, third);
+            }
+        }
+
+        i {
+            font-size: 1.5em;
+            margin-top: 1rem;
+        }
+    }
+}
+
+@media(max-width: 1067px){
+    section.home {
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+        height: auto !important;
+        padding-bottom: 4rem;
+        justify-content: center !important;
+        height: 90vh !important;
+
+        .info {
+            padding: 3rem !important;
+            align-items: center !important;
+            justify-content: center !important;
+
+            .title {
+                font-size: 2em;
+            }
+
+            .text {
+                width: auto;
+            }
+            
+            .button-group {
+                .main-btn {
+                    margin-right: 0.5rem;
+                    width: 8rem !important;
+                }
+            }
+        }
+
+        .social {
+            display: none;
+        }
+    }
+}

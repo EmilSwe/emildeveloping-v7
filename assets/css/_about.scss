@@ -1,0 +1,37 @@
+section.about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    padding: 5rem;
+
+    img.emil {
+        width: 15%;
+        border-radius: 10px;
+    }
+
+    .text {
+        width: 80%;
+        margin-left: auto;
+    }
+}
+
+@media(max-width: 1067px){
+    section.about {
+        flex-direction: column !important;
+        padding: 2rem;
+        height: auto !important;
+        padding-top: 4rem !important;
+        padding-bottom: 4rem !important;
+
+        img.emil {
+            width: 50% !important;
+        }
+
+        .text {
+            width: 100% !important;
+            margin-left: 0 !important;
+            margin-top: 2rem;
+        }
+    }
+}

@@ -1,0 +1,156 @@
+/* Variables */
+/* Color Palette: https://colorhunt.co/palette/181367 */
+$colors: (
+    main: #13202e,
+    secondary: #23374d,
+    third: #1089ff,
+    fourth: #e5e5e5
+);
+
+/* Imports */
+@import "home";
+@import "sponsors";
+@import "about";
+@import "footer";
+@import "top";
+@import "case";
+@import "contact";
+@import "tjanster";
+
+/* Webkit */
+::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+/* General */
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: map-get($colors, main) !important;
+    color: #fff !important;
+
+    b {
+        font-weight: 500 !important;
+    }
+
+    a {
+        color: map-get($colors, third);
+        text-decoration: none !important;
+    }
+
+    .main-btn {
+        padding: 1rem;
+        width: 10rem;
+        border: 1px solid;
+        border-color: map-get($colors, third);
+        background-color: map-get($colors, third);
+        font-weight: 500;
+        color: #fff;
+
+        &:hover {
+            transition: 0.3s;
+            background-color: map-get($colors, secondary);
+            border-color: map-get($colors, secondary);
+        }
+    }
+
+    .mobile-nav {
+        display: flex;
+        flex-direction: row;
+        margin: 1rem;
+
+        button.main-btn {
+            display: none;
+            border: 1px solid map-get($colors, secondary);
+            background-color: map-get($colors, secondary);
+            color: #fff;
+            width: 4rem;
+            border-radius: 5px;
+            margin-left: auto;
+        }
+    
+        img.mobile-logo {
+            display: none;
+        }
+    }
+
+    nav.nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: map-get($colors, main);
+        width: 100%;
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+        height: auto;
+
+        img.logo {
+            width: 3rem;
+        }
+
+        ul.mobile-ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            vertical-align: middle;
+            margin-left: auto !important;
+            margin-top: 1rem;
+
+            a {
+                text-decoration: none !important;
+                color: #fff;
+
+                &:hover {
+                    transition: 0.3s;
+                    color: map-get($colors, third) !important;
+                }
+            }
+
+            li {
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+
+            li.active {
+                color: map-get($colors, third) !important;
+            }
+        }
+    }
+}
+
+@media(max-width: 1067px){
+    img.mobile-logo {
+        display: block !important;
+        width: 4rem;
+    }
+
+    button.main-btn {
+        display: block !important;
+    }
+
+    nav#nav {
+        display: none;
+        background-color: rgba(0, 0, 0, 0.726) !important;
+        width: 100% !important;
+        height: 100% !important;
+        position: absolute;
+        padding: 0 !important;
+        
+        ul.mobile-ul {
+            flex-direction: column !important;
+            justify-content: center;
+            align-items: center;
+            padding-left: 0 !important;
+
+            li {
+                margin-top: 2rem;
+            }
+        }
+
+        img.logo {
+            display: none !important;
+        }
+    }
+}

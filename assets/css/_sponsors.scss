@@ -1,0 +1,36 @@
+section.sponsors {
+    height: 30vh;
+    background-image: url("../img/background-2.jpg");
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    img.fivemsverige {
+        width: 10%;
+        margin-right: 2rem;
+    }
+
+    img.ipnordic {
+        width: 5%;
+        margin-left: 2rem;
+        margin-top: -1.5rem;
+    }
+}
+
+@media(max-width: 1067px){
+    section.sponsors {
+        img.fivemsverige {
+            width: 20% !important;
+        }
+    }
+}
+
+@media(max-width: 768px){
+    section.sponsors {
+        img.fivemsverige {
+            width: 25% !important;
+        }
+    }
+}
